@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link href='http://fonts.useso.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src='/javascripts/jquery.min.js' charset="utf-8"></script>
+    {{{block "stylesheets"}}}
+</head>
+<body>
+<div class="header">
+    <div class="hd-wp center w980">
+        <div class="menu-icon J-menu"></div>
+        <a href="javascript:;" class="prj-title">Sketch Retrieval</a>
+        <ul class="hd-nav">
+            <li class="selected"><a href="/">DEMO</a></li>
+            <li class="algo"><a href="javascript:;">ALGORITHMS</a></li>
+            <li class="about"><a href="javascript:;">ABOUT</a></li>
+        </ul>
+    </div>
+</div>
+<div class="place-holder"></div>
+{{{body}}}
+<div class="footer">
+    <div class="ft-wp center w980">
+        <div class="author-info fl">
+            <p>Authors:</p>
+
+            <div class="author fl">
+                <p class="name">陈 俊</p>
+
+                <p>3120102062</p>
+                <a href="mailto:just.bv.cj@gmail.com">just.bv.cj@gmail.com</a>
+            </div>
+            <div class="author fl">
+                <p class="name">王 艺</p>
+
+                <p>3120101996</p>
+                <a href="mailto:zjutiny@gmail.com">zjutiny@gmail.com</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{{{block "javascripts"}}}
+<script>
+    $(function () {
+        var $nav = $('.mobile');
+        $(document).on('click', '.J-menu', function () {
+            $nav.toggleClass('show');
+            $nav.css({top: '70px'});
+        }).on('click', '.algo', function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.body').empty();
+            var str = '<div class="body algo" style="width: 100%; height: 700px">' +
+                            '<h1>' + 'Descriptor: HOG' +
+                    '</h1>' +
+                    '<h1>' + 'BoVW' +
+                    '</h1>' +'<h1>' + 'TF-IDF' +
+                    '</h1>' +
+                    '<h1>' + 'Distance: city-block' +
+                    '</h1>' +
+                    '<h1>' + '14661 Images for training' +
+                    '</h1>' +
+                    '<h1>' + '' +
+                    '</h1>' +
+                    '</div>'
+            $('.body').html(str);
+        }).on('click', '.about', function(){
+            $('.body').empty();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+html, body, p, div, section, header, footer {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.none {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: url("/images/bg.png");
+    overflow-x: hidden;
+}
+
+a {
+    color: #fff;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w980 {
+    width: 980px;
+}
+
+.w1180 {
+    width: 1180px;
+}
+
+.hd-wp, .ft-wp, .container-wp {
+    transition: 0.5s;
+}
+
+.hd-wp, .ft-wp {
+    position: relative;
+}
+
+.place-holder {
+    width: 100%;
+    height: 70px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background-color: #2BB8AA;
+    box-shadow: 0 1px 6px #888888;
+    z-index: 1000;
+}
+
+.menu-icon {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #555;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    text-indent: -23em;
+    /*background: url('/images/menu.png');*/
+}
+
+.menu-icon:before {
+    position: absolute;
+    width: 24px;
+    height: 5px;
+    top: 24px;
+    left: 23px;
+    content: '';
+    display: block;
+    border-bottom: 4px solid #999;
+    border-top: 4px solid #999;
+}
+
+.menu-icon:after {
+    position: absolute;
+    width: 24px;
+    height: 5px;
+    top: 42px;
+    left: 23px;
+    content: '';
+    /*border-bottom: 4px solid #999;*/
+    border-top: 4px solid #999;
+    display: block;
+}
+
+.hd-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+.hd-nav li{
+    display: inline-block;
+    height: 70px;
+    padding: 0 20px;
+    color: #ffffff;
+}
+
+.header .hd-nav a{
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.hd-nav a:hover {
+    border-color: #fff;
+}
+
+
+.hd-nav li.selected a {
+    border-color: #fff;
+}
+
+.hd-wp a {
+    font-size: 34px;
+}
+
+.footer {
+    /*position: fixed;*/
+    margin-top: 160px;
+    width: 100%;
+    background-color: #333;
+}
+
+.ft-wp {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    color: #dddddd;
+    overflow: hidden;
+}
+
+.ft-wp a {
+    color: #dddddd;
+    transition: 0.5s;
+}
+
+.author-info {
+    border-right: 1px solid #aaa;
+}
+
+.author-info>p {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.author {
+    width: 200px;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.ft-wp .author:hover a{
+    color: #8beeff;
+}
+
+.ft-wp .author:hover {
+    color: #8beeff;
+}
+
+.author .name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 33px;
+    font-size: 14px;
+    line-height: 32px;
+    border: none;
+    border-radius: 2px;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+@media screen and (min-width: 720px) and (max-width: 980px) {
+    .hd-wp, .ft-wp, .container-wp {
+        width: 720px;
+    }
+
+    .container-wp .img-wp{
+        width: 300px;
+    }
+}
+
+@media screen  and (max-width: 720px){
+
+    .header .hd-nav {
+        /*display: none;*/
+        display: block;
+        position: fixed;
+        top: 70px;
+        width: 100%;
+        background-color: #555;
+        height: 50px;
+        line-height: 50px;
+        transition: 0.5s;
+        box-shadow: 0 1px 6px #888888;
+    }
+
+    .header .hd-nav li {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .header .hd-nav li a {
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+    }
+
+    .hd-wp, .ft-wp, .container-wp {
+        width: 480px;
+    }
+
+    .hd-wp {
+        text-align: center;
+    }
+
+    .body .container-wp .board-wp{
+        margin-top: 80px;
+    }
+
+    .container-wp .left-part {
+        float: none;
+        width: auto;
+    }
+
+    .container-wp .left-part .board-wp {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-wp .left-part .btn-wp {
+        text-align: center;
+    }
+
+    .container-wp .right-part {
+        position: relative;
+        width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-y: auto;
+    }
+
+    .container-wp .right-part .img-wp {
+        width: auto;
+        line-height: 70px;
+        padding: 20px 55px;
+
+    }
+
+    .container-wp .right-part .img-wp img {
+        float: none;
+        display: inline-block;
+        width: 150px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    .footer {
+    }
+
+    .header .menu-icon {
+        /*display: block;*/
+    }
+
+    .ft-wp .author-info {
+        border-right: none;
+    }
+
+}

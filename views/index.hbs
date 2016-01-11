@@ -1,0 +1,47 @@
+{{#extend "stylesheets"}}
+    <link rel='stylesheet' href='/stylesheets/main.css'/>
+    <link rel='stylesheet' href='/stylesheets/loading.css'/>
+{{/extend}}
+<div class="overlay loading">
+    <section class="main">
+        <!-- the component -->
+        <div class="wrapper">
+            <div class="inner">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="body">
+    <div class="container-wp w980 center">
+        <div class="left-part fl">
+            <div class="board-wp">
+                <canvas class="paint-board"></canvas>
+            </div>
+            <div class="btn-wp">
+                <a href="javascript:;" class="btn btn-submit">Submit</a>
+                <a href="javascript:;" class="btn btn-clear">Clear</a>
+                <a href="javascript:;" class="btn btn-upload">Upload</a>
+                <form action="/api/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="files[]" class="none J-upload" value=""/>
+                </form>
+                <p class="value"></p>
+            </div>
+        </div>
+        <div class="right-part">
+            <div class="img-wp">
+                Results Here
+            </div>
+        </div>
+    </div>
+</div>
+{{#extend "javascripts"}}
+    <script src="/javascripts/canvas.js"></script>
+    <script src="/javascripts/loadpic.js"></script>
+{{/extend}}

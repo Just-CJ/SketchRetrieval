@@ -1,0 +1,104 @@
+.body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    /*background-color: #aaa;*/
+    /*opacity: 0.6;*/
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.container-wp {
+    overflow-x: hidden;
+}
+
+.left-part {
+    width: 350px;
+    /*background-color: bisque;*/
+}
+
+.board-wp {
+    box-sizing: border-box;
+    margin-top: 40px;
+    height: 310px;
+    width: 310px;
+    border: 5px solid #2bb8aa;
+}
+
+.board-wp canvas.paint-board {
+    width: 300px;
+    height: 300px;
+    z-index: 5;
+    background-color: #ffffff;
+}
+
+.right-part {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.img-wp {
+    width: 520px;
+    line-height: 80px;
+    border: 2px dashed #888;
+    border-radius: 15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    color: #777;
+    text-align: center;
+    font-size: 20px;
+}
+
+.img-wp img {
+    cursor: pointer;
+}
+
+.img-wp:first-child {
+    margin-top: 40px;
+}
+
+.btn-wp {
+    margin-top: 20px;
+    line-height: 50px;
+}
+
+.img {
+    margin-right: 20px;
+}
+
+.img img {
+    height: 100px;
+}
+
+.btn-wp a {
+    margin-right: 10px;
+}
+
+.btn-submit {
+    background-color: #71ceb5;
+}
+
+.btn-clear {
+    background-color: #bd88ae;
+}
+
+.btn-upload {
+    background-color: #ffbb2f;
+}
+
+.btn-disabled {
+    background-color: #c6c5c1;
+    cursor: default;
+}
+
+.btn-disabled:hover {
+    opacity: 1;
+}
