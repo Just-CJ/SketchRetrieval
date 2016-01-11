@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
-python/
 *.zip
 python/330sketches/
 python/resize_img/
