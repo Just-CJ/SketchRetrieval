@@ -172,6 +172,7 @@ a {
 
 .author-info {
     border-right: 1px solid #aaa;
+    overflow: hidden;
 }
 
 .author-info>p {
@@ -183,6 +184,23 @@ a {
     width: 200px;
     transition: 0.5s;
     cursor: default;
+}
+
+.link-info {
+
+    /*padding-left: 70px;*/
+}
+
+.link-info a.link {
+    font-size: 32px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.link-info a.link:hover {
+    color: #4bff9c;
 }
 
 .ft-wp .author:hover a{
@@ -219,6 +237,20 @@ a {
 
     .container-wp .img-wp{
         width: 300px;
+    }
+
+    .footer .link-info {
+        float: none;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .footer .author-info {
+        float: none;
+        border-right: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #aaa;
     }
 }
 
@@ -308,4 +340,17 @@ a {
         border-right: none;
     }
 
+    .footer .link-info {
+        width: auto;
+        float: none;
+        text-align: center;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .footer .author-info {
+        float: none;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #aaa;
+    }
 }

@@ -2,8 +2,16 @@
 <html>
 <head>
     <title>{{title}}</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Sketch Based Image Retrieval System"/>
+    <meta name="author" content="just_cj wytiny"/>
+    <meta name="keyword" content="image, retrieval, hog, k-means, zju, opencv, python"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="googlebot" content="index, follow"/>
     <link href='http://fonts.useso.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <script src='/javascripts/jquery.min.js' charset="utf-8"></script>
     {{{block "stylesheets"}}}
 </head>
@@ -11,7 +19,7 @@
 <div class="header">
     <div class="hd-wp center w980">
         <div class="menu-icon J-menu"></div>
-        <a href="javascript:;" class="prj-title">Sketch Retrieval</a>
+        <a href="/" class="prj-title">Sketch Retrieval</a>
         <ul class="hd-nav">
             <li class="demo {{#if demo}}selected{{/if}}"><a href="/">DEMO</a></li>
             <li class="algo {{#if algo}}selected{{/if}}"><a href="/algo">ALGORITHMS</a></li>
@@ -36,12 +44,16 @@
                 <a href="mailto:zjutiny@gmail.com">zjutiny@gmail.com</a>
             </div>
         </div>
-
+        <div class="link-info fr">
+            <p>
+                <a class="fa fa-file-text-o link" href="http://www.wytiny.com" target="_blank"></a>
+                <a class="fa fa-github link" href="https://github.com/Just-CJ/SketchRetrieval" target="_blank"></a>
+                <a class="fa fa-twitter link" href="https://twitter.com/zjutiny" target="_blank"></a>
+                <a class="fa fa-weibo link" href="http://weibo.com/3164958577/profile?topnav=1&wvr=6&is_all=1" target="_blank"></a>
+            </p>
+        </div>
     </div>
 </div>
 {{{block "javascripts"}}}
-<script>
-
-</script>
 </body>
 </html>
