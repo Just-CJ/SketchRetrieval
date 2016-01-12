@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('hbs');
 
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var api = require('./routes/api');
@@ -78,6 +79,14 @@ hbs.registerHelper('block', function (name) {
     // clear the block
     blocks[name] = [];
     return val;
+});
+
+hbs.registerHelper('list', function(items, context){
+    var val = '';
+    for(var i = 0; i < items.length; i++){
+        val += '<div class="img"><img src="' + items[i] + '" alt=""/></div>\n';
+    }
+
 });
 
 module.exports = app;

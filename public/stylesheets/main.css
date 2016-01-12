@@ -76,6 +76,9 @@
 
 .img img {
     height: 100px;
+    display: inline-block;
+    border: 3px solid #fff;
+    box-shadow: 0 0 5px #aaa;
 }
 
 .btn-wp a {
@@ -88,6 +91,10 @@
 
 .btn-clear {
     background-color: #bd88ae;
+}
+
+.btn-select {
+    background-color: #ff95d4;
 }
 
 .btn-upload {

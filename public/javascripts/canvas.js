@@ -4,7 +4,8 @@ $(function () {
         _width = 300,
         _height = 300,
         paint = false,
-        x, y, lastPos = {};
+        x, y, lastPos = {},
+        $overlay = $('.overlay');
 
     _initCanvas();
     _clearCanvas();
@@ -14,8 +15,10 @@ $(function () {
         .on('mouseup mouseleave', '.paint-board', mouseUpEvent)
         .on('click', '.btn-clear', _clearCanvas)
         .on('click', '.btn-submit', submitCanvas)
-        .on('click', '.btn-upload', uploadImg);
-
+        .on('click', '.btn-select', selectImg)
+        .on('click', '.btn-upload', uploadImg)
+        .on('change', '.J-select', showFileName)
+        .on('submit', '#upload', submitForm);
 
     function _initCanvas() {
         canvas.width = _width;
@@ -69,13 +72,11 @@ $(function () {
 
     function submitCanvas(e) {
         e.preventDefault();
-        var $this = $(this),
-            $overlay = $('.overlay');
+        var $this = $(this);
 
         if ($this.hasClass('disabled')) {
             return;
         }
-
         $this.addClass('disabled btn-disabled');
         $overlay.css({display: 'block'});
 
@@ -109,14 +110,62 @@ $(function () {
         });
     }
 
-    function uploadImg(e) {
+    function selectImg(e) {
         e.preventDefault();
         var $this = $(this);
         if ($this.hasClass('disabled')) {
             return;
         }
         $this.addClass('disabled btn-disabled');
-        $('.J-upload').click();
+        $('.J-select').click();
         $this.removeClass('disabled btn-disabled');
     }
+
+    function uploadImg(e) {
+        e.preventDefault();
+        var $btn = $('.btn-upload');
+        if ($btn.hasClass('disabled')) {
+            return;
+        }
+        $btn.addClass('disabled btn-disabled');
+        $overlay.css({display: 'block'});
+        $('#upload').submit();
+    }
+
+    function showFileName(e) {
+        e.preventDefault();
+        var fileName = $(this).val().split(/(\\|\/)/g).pop();
+        $('.filename').text('Selected File: ' + fileName);
+    }
+
+    function submitForm(e) {
+        e.preventDefault();
+        var url = '/api/upload',
+        //formData = 'asdf';
+            formData = new FormData(this);
+        console.log(formData);
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (ajaxData) {
+                $(document).triggerHandler({
+                    type: 'updateImages',
+                    images: ajaxData.images,
+                    fileName: ajaxData.fileName
+                });
+            },
+            error: function (xhr, textStatus) {
+                console.log(textStatus);
+            },
+            complete: function () {
+                $('.btn-upload').removeClass('disabled btn-disabled');
+                $overlay.css({display: 'none'});
+            }
+        });
+    }
+
 });

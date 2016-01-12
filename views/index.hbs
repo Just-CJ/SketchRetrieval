@@ -27,10 +27,12 @@
             <div class="btn-wp">
                 <a href="javascript:;" class="btn btn-submit">Submit</a>
                 <a href="javascript:;" class="btn btn-clear">Clear</a>
+                <a href="javascript:;" class="btn btn-select">Select</a>
                 <a href="javascript:;" class="btn btn-upload">Upload</a>
-                <form action="/api/upload" method="post" enctype="multipart/form-data">
-                    <input type="file" name="files[]" class="none J-upload" value=""/>
+                <form enctype="multipart/form-data" id="upload">
+                    <input type="file" name="file" class="none J-select" value="" accept=".png, .jpg"/>
                 </form>
+                <p class="filename"></p>
                 <p class="value"></p>
             </div>
         </div>

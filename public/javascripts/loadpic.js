@@ -3,7 +3,7 @@ $(function(){
         window.g_images = data.images;
         window.g_fileName = data.fileName;
         updateImages();
-    }).on('click', '.img', function(){
+    }).on('mouseenter click', '.img', function(){
         var val = $(this).find('img').data('val');
         $('.value').html(val);
     });
