@@ -61,6 +61,16 @@ a {
     height: 70px;
 }
 
+.header a.prj-title {
+    font: 40px "Lobster", "Lucida Grande", "Cuprum", Helvetica, Arial, sans-serif;
+    line-height: 70px;
+    transition: 0.5s;
+}
+
+.header a.prj-title:hover {
+    color: #fdff1d;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -187,8 +197,6 @@ a {
 }
 
 .link-info {
-
-    /*padding-left: 70px;*/
 }
 
 .link-info a.link {
@@ -327,13 +335,6 @@ a {
         width: 150px;
         height: auto;
         margin-right: 5px;
-    }
-
-    .footer {
-    }
-
-    .header .menu-icon {
-        /*display: block;*/
     }
 
     .ft-wp .author-info {

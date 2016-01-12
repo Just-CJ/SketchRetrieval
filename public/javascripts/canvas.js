@@ -86,13 +86,10 @@ $(function () {
         $.ajax({
             type: 'POST',
             url: '/api/submit',
-            //async: true,
             data: {
                 image: data
             },
             success: function (ajaxData) {
-                //var result = JSON.parse(images);
-                //console.log(ajaxData.images);
                 $(document).triggerHandler({
                     type: 'updateImages',
                     images: ajaxData.images,
@@ -101,7 +98,6 @@ $(function () {
             },
             error: function (xhr, textStatus) {
                 console.log(textStatus);
-                //$('#error-info').text(textStatus).show();
             },
             complete: function () {
                 $this.removeClass('disabled btn-disabled');
