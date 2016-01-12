@@ -2,6 +2,7 @@
     color: #555;
     height: 400px;
     margin-top: 60px;
+    transition: 0.5s;
 }
 
 .body h1, .body h2{

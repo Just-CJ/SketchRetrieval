@@ -213,7 +213,7 @@ a {
 }
 
 @media screen and (min-width: 720px) and (max-width: 980px) {
-    .hd-wp, .ft-wp, .container-wp {
+    .hd-wp, .ft-wp, .container-wp, .algo-wp, .about-wp {
         width: 720px;
     }
 
@@ -248,7 +248,7 @@ a {
         font-size: 15px;
     }
 
-    .hd-wp, .ft-wp, .container-wp {
+    .hd-wp, .ft-wp, .container-wp, .algo-wp, .about-wp {
         width: 480px;
     }
 

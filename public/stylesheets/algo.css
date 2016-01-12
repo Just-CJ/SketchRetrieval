@@ -2,6 +2,7 @@
     margin-top: 60px;
     height: 500px;
     color: #555;
+    transition: 0.5s;
 }
 
 .body p {
